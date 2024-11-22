@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Check if running as root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root (sudo ./run.sh)"
+  exit
+fi
+
+# Create log directory if it doesn't exist
+mkdir -p /var/log/coffee_machine
+
+# Check if Python 3 is installed
+if ! command -v python3 &> /dev/null
+then
+    echo "Python 3 is not installed. Installing..."
+    apt-get update
+    apt-get install -y python3 python3-pip
+fi
+
+# Install/Update required packages
+echo "Checking/Installing required packages..."
+pip3 install -r requirements.txt
+
+# Enable SPI if not already enabled
+if ! ls /dev/spi* 1> /dev/null 2>&1; then
+    echo "SPI interface not enabled. Enabling..."
+    raspi-config nonint do_spi 0
+fi
+
+# Start the coffee machine control system
+echo "Starting Coffee Machine Control System..."
+echo "Logs will be written to /var/log/coffee_machine/"
+python3 coffee_machine_control.py
