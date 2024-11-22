@@ -1,0 +1,11 @@
+RPi.GPIO>=0.7.1
+spidev>=3.5
+pytest>=7.0.0
+pytest-cov>=3.0.0
+numpy>=1.21.0
+matplotlib>=3.4.0
+tk>=0.1.0
+pyyaml>=6.0.0
+pyserial>=3.5
+logging>=0.5.1.2
+datetime>=4.3
