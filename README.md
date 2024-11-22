@@ -1,18 +1,18 @@
-## **Phase 3: Software Development (October 2, 2024 – October 10, 2024)**
+## **Phase 3: Software Development**
 #### **Objective**: Develop software to control motor speed, manage user inputs, and handle errors.
 
 ### **Software Development Breakdown**:
 
-1. **Motor Control Software** *(October 2 – October 4, 2024)*:
+1. **Motor Control Software** :
    - Write code to manage motor speed with precision control.
 
-2. **User Interface Development** *(October 5 – October 7, 2024)*:
+2. **User Interface Development** :
    - Develop software to control feeder speed and set dispensing parameters.
 
-3. **Safety and Error Handling Implementation** *(October 8 – October 9, 2024)*:
+3. **Safety and Error Handling Implementation** :
    - Implement safety features and error handling.
 
-4. **Testing and Debugging** *(October 10, 2024)*:
+4. **Testing and Debugging**:
    - Test the software to ensure it operates as expected.
 
 #### **Deliverables**:
